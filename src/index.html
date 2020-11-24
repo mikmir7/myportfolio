@@ -1,0 +1,676 @@
+<html>
+  <head> <style>  
+      html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+    body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8rem; /* 18px */
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--main-white);
+}
+    h1 {
+  font-family: aladin;
+  font-weight: 700;
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkgreen;
+}
+    h2 {
+      font-family: "Aclonica";
+      display: block;
+      text-align: center;
+    }
+    
+    h3{
+      font-size: 1.9rem;
+    }
+    h4 {
+      background-color: thistle;
+      font-size: 2rem;
+      display: block;
+      text-align: center;
+    }
+
+h1 {
+  font-size: 6rem;
+}
+
+   .h1a {
+  display: inline-block;
+  margin: 0 0.5rem;
+
+  animation: bounceInDown ; 
+  animation-duration: 1s; 
+}
+    
+    .h1b {
+      display: inline-block;
+  margin: 0 0.5rem;
+
+  animation: bounceInLeft ; 
+  animation-duration: 4s;
+    }
+    
+    .h1c {
+      display: inline-block;
+  margin: 0 0.5rem;
+
+  animation: bounceInRight ; 
+  animation-duration: 5s;
+    }
+    
+    .h1d {
+      display: inline-block;
+  margin: 0 0.5rem;
+
+  animation: bounceInUp ; 
+  animation-duration: 5s;
+    }
+    
+h2 {
+  font-size: 4.2rem;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--main-white);
+  
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+    .btn1 {
+      background-color: lightblue;
+      border-radius: 4px;
+      font-size: 20px;
+      padding: 12px 16px;
+  transition-duration: 0.4s;
+}
+
+.btn1:hover {
+  background-color: #4CAF50; 
+  color: white;
+}
+    
+    
+    #navbar {
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(beige, teal);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+  z-index: 10;
+}
+
+.nav-list {
+  display: flex;
+  margin-right: 2rem;
+}
+
+@media (max-width: 28.75em) {
+  #navbar {
+    justify-content: center;
+  }
+
+  .nav-list {
+    margin: 0 1rem;
+  }
+}
+
+.nav-list a {
+  display: block;
+  font-size: 2.2rem;
+  padding: 2rem;
+}
+
+.nav-list a:hover {
+  background: var(--main-blue);
+}
+    .welcome-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: lavender;
+  
+}
+
+.welcome-section > p {
+  font-size: 3rem;
+  font-weight: 200;
+  font-style: italic;
+  color: var(--main-red);
+}
+    
+    .projects {
+  text-align: center;
+  padding: 10rem 2rem;
+      display: block;
+      
+ 
+}
+
+.projects-header {
+  max-width: 640px;
+  margin: 0 auto 6rem auto;
+  border-bottom: 0.2rem solid var(--main-white);
+  
+}
+
+@media (max-width: 28.75em) {
+  .projects-header {
+    font-size: 4rem;
+  }
+}
+    
+    .projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 4rem;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  margin-bottom: 6rem;
+  background-color: wheat;
+      
+}
+
+@media (max-width: 30.625em) {
+  .projects {
+    padding: 6rem 1rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.projects {
+  background: var(--main-gray);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 2px;
+}
+    
+
+.project-images {
+  height: calc(100% - 6.8rem);
+  width: 100%;
+  object-fit: cover;
+  display: inline-block;
+  margin: 0 0.5rem;
+   display: inline-block;
+  margin: 0 0.5rem;
+  
+
+    }
+
+/* Shutter In Vertical */
+.hvr-shutter-in-vertical {
+  display: block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  background: #2098D1;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.hvr-shutter-in-vertical:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #e1e1e1;
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+  -webkit-transform-origin: 50%;
+  transform-origin: 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-shutter-in-vertical:hover, .hvr-shutter-in-vertical:focus, .hvr-shutter-in-vertical:active {
+  color: black;
+}
+.hvr-shutter-in-vertical:hover:before, .hvr-shutter-in-vertical:focus:before, .hvr-shutter-in-vertical:active:before {
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+}
+
+ /* Buzz Out */
+@-webkit-keyframes hvr-buzz-out {
+  10% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+  20% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+  30% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+  40% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+  50% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg);
+  }
+  60% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg);
+  }
+  70% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg);
+  }
+  80% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg);
+  }
+  90% {
+    -webkit-transform: translateX(1px) rotate(0);
+    transform: translateX(1px) rotate(0);
+  }
+  100% {
+    -webkit-transform: translateX(-1px) rotate(0);
+    transform: translateX(-1px) rotate(0);
+  }
+}
+@keyframes hvr-buzz-out {
+  10% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+  20% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+  30% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+  40% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+  50% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg);
+  }
+  60% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg);
+  }
+  70% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg);
+  }
+  80% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg);
+  }
+  90% {
+    -webkit-transform: translateX(1px) rotate(0);
+    transform: translateX(1px) rotate(0);
+  }
+  100% {
+    -webkit-transform: translateX(-1px) rotate(0);
+    transform: translateX(-1px) rotate(0);
+  }
+}
+.hvr-buzz-out {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.hvr-buzz-out:hover, .hvr-buzz-out:focus, .hvr-buzz-out:active {
+  -webkit-animation-name: hvr-buzz-out;
+  animation-name: hvr-buzz-out;
+  -webkit-animation-duration: 0.75s;
+  animation-duration: 0.75s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
+    /* Pulse Shrink */
+@-webkit-keyframes hvr-pulse-shrink {
+  to {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+@keyframes hvr-pulse-shrink {
+  to {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+.hvr-pulse-shrink {
+  display: block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.hvr-pulse-shrink:hover, .hvr-pulse-shrink:focus, .hvr-pulse-shrink:active {
+  -webkit-animation-name: hvr-pulse-shrink;
+  animation-name: hvr-pulse-shrink;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+    
+    
+   /* Wobble To Top Right */
+@-webkit-keyframes hvr-wobble-to-top-right {
+  16.65% {
+    -webkit-transform: translate(8px, -8px);
+    transform: translate(8px, -8px);
+  }
+  33.3% {
+    -webkit-transform: translate(-6px, 6px);
+    transform: translate(-6px, 6px);
+  }
+  49.95% {
+    -webkit-transform: translate(4px, -4px);
+    transform: translate(4px, -4px);
+  }
+  66.6% {
+    -webkit-transform: translate(-2px, 2px);
+    transform: translate(-2px, 2px);
+  }
+  83.25% {
+    -webkit-transform: translate(1px, -1px);
+    transform: translate(1px, -1px);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+}
+/* Pulse Grow */
+@-webkit-keyframes hvr-pulse-grow {
+  to {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
+@keyframes hvr-pulse-grow {
+  to {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
+.hvr-pulse-grow {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.hvr-pulse-grow:hover, .hvr-pulse-grow:focus, .hvr-pulse-grow:active {
+  -webkit-animation-name: hvr-pulse-grow;
+  animation-name: hvr-pulse-grow;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+    
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 2px;
+}
+
+
+    .contact-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 80vh;
+  padding: 0 2rem;
+  background: linear-gradient(beige, teal);
+}
+
+.contact-section-header > h2 {
+  font-size: 6rem;
+}
+
+@media (max-width: 28.75em) {
+  .contact-section-header > h2 {
+    font-size: 4rem;
+  }
+}
+
+.contact-section-header > p {
+  font-style: italic;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 980px;
+  margin-top: 4rem;
+  flex-wrap: wrap;
+}
+
+.contact-details {
+  font-size: 2.4rem;
+  text-shadow: 2px 2px 1px #1f1f1f;
+  transition: transform 0.3s ease-out;
+}
+
+.contact-details:hover {
+  transform: translateY(8px);
+}
+
+/* Footer */
+
+footer {
+  font-weight: 300;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2rem;
+  background: linear-gradient(beige, teal);
+  border-top: 4px solid var(--main-red);
+}
+
+footer > p {
+  margin: 2rem;
+}
+
+footer i {
+  vertical-align: middle;
+}
+
+@media (max-width: 28.75em) {
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+ 
+    
+    </style>
+
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+<script src='https://kit.fontawesome.com/a076d05399.js'>
+  
+ 
+    </script>
+ <link rel="stylesheet"   href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
+  
+  </head>
+  <body>
+    <nav id="navbar">
+      <ul  class="nav-list">
+        <li><a href="#welcome-section" class="hvr-pulse-grow"> About</a></li>
+        <li><a href="#projects" class="hvr-pulse-grow"> My Work</a></li>
+        <li><a href="#contact" class="hvr-pulse-grow"> Contact</a></li>
+      </ul>
+    </nav>
+<section id="welcome-section"  class="welcome-section"> 
+      <h1 class="h1a">Hi there</h1>
+     <h1 class="h1b">I am a junior web developer</h1>
+  <h1 class="h1c">This is my Portfolio</h1>
+  <h1 class="h1d">And hope you like it !</h1>
+
+  
+    
+    </section>
+<section id="projects" >
+  <h2 class="hvr-pulse-shrink">These are my projects</h2>
+  <div class="projects-grid">
+    <a href="https://codepen.io/mike95m/pen/ExKPmwP" target="_blank" class="project-tile hvr-buzz-out"> <img class="project-images"     src="https://content.fortune.com/wp-content/uploads/2015/09/steve-jobs.jpg?resize=1200,600" alt="Steve Jobs holding a presentation"> 
+      <h4 class="hvr-shutter-in-vertical">
+        Tribute page</h4>
+    </a>
+    <a href="https://codepen.io/mike95m/pen/QWNyVPr" target="_blank" class="project-tile hvr-buzz-out"> <img class="project-images"   src="https://images.theconversation.com/files/287904/original/file-20190813-9404-1feepwk.jpg?ixlib=rb-1.1.0&rect=1357%2C339%2C4944%2C2738&q=45&auto=format&w=496&fit=clip" alt="group of people speaking"> 
+      <h4 class="hvr-shutter-in-vertical">Survey Form</h4>
+    </a>
+    <a href="https://codepen.io/mike95m/pen/bGpBGNL" target="_blank" class="project-tile hvr-buzz-out"> <img class="project-images"   src="https://static.wixstatic.com/media/94a51f_04a87a6dc1f84ed990b4895952d2da7b~mv2.png/v1/fill/w_1000,h_571,al_c,usm_0.66_1.00_0.01/94a51f_04a7a6dc1f84ed990b4895952d2da7b~mv2.png" alt="landing page"> 
+      <h4 class="hvr-shutter-in-vertical">Product landing page</h4>
+    </a>
+     <a href="https://codepen.io/mike95m/pen/MWyJGEY" target="_blank" class="project-tile hvr-buzz-out"> <img class="project-images"   src="https://fossbytes.com/wp-content/uploads/2016/08/python-Programming-Language-Software.jpg" alt="Steve Jobs holding a presentation"> 
+      <h4 class="hvr-shutter-in-vertical">Technical documentation page</h4>
+    </a>
+    <a href="https://codepen.io/mike95m/full/MWeZOvm" target="_blank" class="project-tile hvr-buzz-out">
+      <img class="project-images" src="https://i.pinimg.com/originals/7e/bf/87/7ebf87e0b2f908c7c47523fb7ce630a4.jpg" alt="a drum machine displayed">
+      <h4 class="hvr-shutter-in-vertical">Drum Machine</h4>
+    </a>
+    <a href="https://codepen.io/mike95m/full/WNxYKyp" target="_blank" class="project-tile">
+      <img class="project-images" src="https://miro.medium.com/max/924/1*8wNWIJh1hPBoGFxLrYlvUQ.png" alt="quote machine">
+      <h4 class="hvr-shutter-in-vertical">Random Quote Machine</h4>
+    </a>
+    <a href="https://codepen.io/mike95m/full/zYByVRP" target="_blank" class="project-tile hvr-buzz-out">
+      <img class="project-images" src="https://i.imgur.com/zFIpkTE.png" alt="calculator">
+      <h4 class="hvr-shutter-in-vertical">My Calculator</h4>
+    </a>
+    <a href="https://codepen.io/mike95m/full/YzWdoxR" target="_blank" class="project-tile hvr-buzz-out">
+      <img class="project-images" src="https://i.imgur.com/wCfu40H.png" alt="markdown previewer">
+      <h4 class="hvr-shutter-in-vertical">Markdown Previewer</h4>
+    </a>
+    <a href="https://codepen.io/mike95m/full/zYqRepL" target="_blank" class="project-tile hvr-buzz-out">
+      <img class="project-images" src="https://i.imgur.com/dsz2vKb.jpeg" alt="scatterplot graph">
+      <h4 class="hvr-shutter-in-vertical">Scatterplot graph</h4>
+    </a>
+     <a href="https://codepen.io/mike95m/full/yLOPEjQ" target="_blank" class="project-tile hvr-buzz-out">
+      <img class="project-images" src="https://i.imgur.com/95YDSRA.png" alt="bar chart">
+      <h4 class="hvr-shutter-in-vertical">Bar Chart</h4>
+    </a>
+    <a href="https://mikael-sudoku-solver.herokuapp.com/" target="_blank" class="project-tile hvr-buzz-out">
+      <img class="project-images" src="https://play-lh.googleusercontent.com/45LArsWU_w228q0uLQR6gPBVA0Ttw72GdMUXnxKk-FbR3NPbDdvMnGEnoVKmluo3vQ" alt="sudoku solver">
+      <h4 class="hvr-shutter-in-vertical">Sudoku Solver</h4>
+    </a>
+    <a href="https://metricimp-converter.herokuapp.com/" target="_blank" class="project-tile hvr-buzz-out">
+      <img class="project-images" src="https://www.archtoolbox.com/images/represent/metric-imp-conv_th.png" alt="met/imp converter">
+      <h4 class="hvr-shutter-in-vertical">Metric/Imp Converter</h4>
+    </a>
+    <a href="https://exercise-tracker-proj.herokuapp.com/" target="_blank" class="project-tile hvr-buzz-out">
+      <img class="project-images" src="https://i.ytimg.com/vi/ANfJ0oGL2Pk/maxresdefault.jpg" alt="exercise tracker">
+      <h4 class="hvr-shutter-in-vertical">Exercise Tracker</h4>
+    </a>
+    <a href="https://file-metadata-proj.herokuapp.com/" target="_blank" class="project-tile hvr-buzz-out">
+      <img class="project-images" src="https://i.imgur.com/I1LlMxp.png" alt="metadata micro">
+      <h4 class="hvr-shutter-in-vertical">File Metadata Micro</h4>
+    </a>
+    <a href="https://timestamp-proj.herokuapp.com/" target="_blank" class="project-tile hvr-buzz-out">
+      <img class="project-images" src="https://2.bp.blogspot.com/-seV0HaV9ELQ/U088q7jovPI/AAAAAAAAAR0/mQ4CsbnnehU/s1600/unixtime.png" alt="timestamp micro">
+      <h4 class="hvr-shutter-in-vertical">Timestamp Micro</h4>
+    </a>
+    <a href="https://reqheaderparser-proj.herokuapp.com/" target="_blank" class="project-tile hvr-buzz-out">
+      <img class="project-images" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOcXRYUrKLFGeH7UYAuzBmWdyUMXsP5jqLRA&usqp=CAU" alt="headerparser micro">
+      <h4 class="hvr-shutter-in-vertical">Request HeaderParser Micro</h4>
+    </a>
+    <a href="https://url-shortener-proj.herokuapp.com/" target="_blank" class="project-tile hvr-buzz-out">
+      <img class="project-images" src="https://www.printrunner.com/blog/wp-content/uploads/2016/09/10_UsingURLShorteners-777x437.jpg" alt="URL Shortener micro">
+      <h4 class="hvr-shutter-in-vertical">URL Shortener Micro</h4>
+    </a>
+    <a href="https://issue-tracker-proj.herokuapp.com/" target="_blank" class="project-tile hvr-buzz-out">
+      <img class="project-images" src="https://i.imgur.com/5cVIlYr.png" alt="Issue Tracker">
+      <h4 class="hvr-shutter-in-vertical">Issue Tracker</h4>
+    </a>
+    <a href="https://ame-brit-translator-proj.herokuapp.com/" target="_blank" class="project-tile hvr-buzz-out">
+      <img class="project-images" src="https://www.pngitem.com/pimgs/m/244-2449426_american-english-germany-and-us-flag-hd-png.png" alt="American British Translator">
+      <h4 class="hvr-shutter-in-vertical">American-British Translator</h4>
+    </a>
+    
+    
+    
+    
+    
+  </div>
+  
+  
+  
+  
+  </section>
+<section id="contact" class="contact-section">
+      <h3>Would you like to work with me?</h3>
+  <button class="btn1"><a href="mailto:mikaelm7777777@gmail.com">Let's talk</a></button>
+      <div class="contact-links">
+      <a id="profile-link" href="https://github.com/mikmir7" target="_blank" class="btn contact-details"><button style='font-size:24px'>Github<i class='fab fa-github'></i></button>
+      </div>
+    </section>
+  
+  
+  
+  </body>
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+</html>
